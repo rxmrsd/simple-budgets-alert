@@ -4,7 +4,7 @@ import os
 
 from dotenv import load_dotenv
 
-from src.cost_analyzer import CostAnalyzer
+from src import CostAnalyzer
 
 load_dotenv()
 

@@ -1,7 +1,5 @@
 """cost_analyzer.py"""
 
-from typing import Dict, List, Optional
-
 from .bigquery_client import BigQueryClient
 from .budget_client import BudgetClient
 from .queries import get_last_30_days_query

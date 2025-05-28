@@ -88,25 +88,22 @@ def analyze_budget_costs(self) -> list[dict]:
         total_cost = 0.0
         project_costs = []
 
-        # プロジェクト単位またはフォルダ単位での集計
-        if project_ids:
-            # プロジェクト単位の処理
-            ...
-        elif folder_ids:
-            # フォルダ単位の処理
+        # プロジェクト単位での集計
+        for cost in costs:
             ...
 
         # 予算に対する割合を計算
         percentage = (total_cost / budget_amount) * 100 if budget_amount > 0 else 0
 
-        analysis_results.append({
-            "budget_name": budget_name,
-            "budget_amount": budget_amount,
-            "total_cost": total_cost,
-            "percentage": percentage,
-            "project_costs": project_costs,
-            "budget_type": "folder" if folder_ids else "project",
-        })
+        analysis_results.append(
+            {
+                "budget_name": budget_name,
+                "budget_amount": budget_amount,
+                "total_cost": total_cost,
+                "percentage": percentage,
+                "project_costs": project_costs,
+            },
+        )
 
     return analysis_results
 ```
@@ -146,12 +143,10 @@ def analyze_budget_costs(self) -> list[dict]:
 3. 直近30日間の利用状況を把握できる
 4. コスト最適化のための意思決定をサポート
 
-このスクリプトを定期的に実行することで、GCPの利用料金を効果的に管理することができます。
+このスクリプトは、GCPの予算管理を自動化し、コスト最適化を支援するための基本的なツールとして活用できます。必要に応じて、アラート機能の追加や、より詳細な分析機能の実装など、機能を拡張することも可能です。
 
 # 参考
 
 - [Google Cloud Billing API](https://cloud.google.com/billing/docs/apis)
 - [Google Cloud BigQuery API](https://cloud.google.com/bigquery/docs/reference/rest)
 - [Python Google Cloud Client Libraries](https://cloud.google.com/python/docs/reference)
-
-このスクリプトは、GCPの予算管理を自動化し、コスト最適化を支援するための基本的なツールとして活用できます。必要に応じて、アラート機能の追加や、より詳細な分析機能の実装など、機能を拡張することも可能です。
