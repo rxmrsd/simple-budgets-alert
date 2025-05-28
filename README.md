@@ -144,9 +144,11 @@ def analyze_budget_costs(self) -> list[dict]:
 4. コスト最適化のための意思決定をサポート
 
 このスクリプトは、GCPの予算管理を自動化し、コスト最適化を支援するための基本的なツールとして活用できます。必要に応じて、アラート機能の追加や、より詳細な分析機能の実装など、機能を拡張することも可能です。
+利用したコードは[こちら](https://github.com/rxmrsd/simple-budgets-alert)。
 
 # 参考
 
+- [Cloud Billing データを BigQuery にエクスポートする](https://cloud.google.com/billing/docs/how-to/export-data-bigquery?hl=ja)
 - [Google Cloud Billing API](https://cloud.google.com/billing/docs/apis)
 - [Google Cloud BigQuery API](https://cloud.google.com/bigquery/docs/reference/rest)
 - [Python Google Cloud Client Libraries](https://cloud.google.com/python/docs/reference)
